@@ -1,0 +1,66 @@
+var aux: String = ""
+var opcionIngresada: String = aux
+
+func deposito() {
+  print("\n")
+  print("Ingrese la cantidad a depositar: ")
+  print("\n")
+  aux = readLine()!
+  opcionIngresada = aux
+
+  if let cantidadADepositar = Double(opcionIngresada) {
+    print("\n")
+    print("Deposito de: $\(cantidadADepositar) realizado con exito")
+    print("\n")
+    // TODO: Puedes agregar aquí la lógica para actualizar el saldo en la cuenta
+  } else {
+    print("Ingrese una cantidad valida")
+    print("\n")
+  }
+  }
+
+while opcionIngresada != "4"{
+  print("Bienvenido al Banco Mexicano")
+  print("1. Depositar Efectivo")
+  print("2. Retirar Efectivo")
+  print("3. Consultar saldo")
+  print("4. Salir")
+  print("\n")
+  print("Ingrese una opcion: ")
+  
+  aux = readLine()!
+  opcionIngresada = aux
+
+switch opcionIngresada {
+  case "1":
+  deposito()
+  print("\n")
+  print("¿Desea continuar con otra operacion? (SI/NO):")
+  
+  aux = readLine()!
+  opcionIngresada = aux
+
+  if opcionIngresada == "no" || opcionIngresada == "NO" || opcionIngresada == "N" || opcionIngresada == "No" ||       opcionIngresada == "no"{
+    print("Cerrando sesion, gracias por su visita")
+    opcionIngresada = "4"
+  }
+  
+  case "2":
+  print("Retirar Efectivo, proximamente.....")
+  print("\n")
+  
+  case "3":
+  print("Consultar saldo, proximamente.....")
+  print("\n")
+  
+  case "4":
+  print("Gracias por su visita")
+
+  default:
+  print("Opcion no valida")
+  print("\n")
+  
+}
+
+  
+}
